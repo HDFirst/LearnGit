@@ -44,6 +44,9 @@ git reflog                                          -->查看命令历史，终�
 工作区、暂存区、版本库
 
 
+记录修改状态而不是记录文件
+
+git diff HEAD -- GitLearning
 
 
 
