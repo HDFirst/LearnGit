@@ -1,0 +1,50 @@
+
+
+
+
+git config --global user.name "Nemo"
+git config --global user.email "345969718@qq.com"
+
+git config user.name
+git config user.email
+
+
+mkdir LearnGit
+cd LearnGit
+pwd
+git init
+
+git add readme.txt
+
+git commit -m "wrote a readme file"
+
+
+git status
+
+git add       -->update
+git restore   -->discard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
