@@ -27,9 +27,18 @@ git restore   -->discard
 git diff readme.txt
 
 
+git log
+git log --pretty=oneline
+
+commit 45c3a27fe10b37e10b89710df3b7fc47c87c6ccc     -->commit id,一般提交的时候会显示前几位数字
+Author: Nemo <345969718@qq.com>                     -->commit Author
+Date:   Tue May 24 02:03:11 2022 +0800              -->commit time
+
+git reset --hard HEAD^                              -->上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+git reset --hard xxxxxxx                            -->只要当前窗口没有关闭，可以回滚到对应的commit id
 
 
-
+git reflog                                          -->查看命令历史，终极后悔药，关闭了窗口时，可以通过该命令获取之前的所有操作记录
 
 
 
