@@ -24,6 +24,8 @@ git status
 git add       -->update
 git restore   -->discard
 
+git diff readme.txt
+
 
 
 
