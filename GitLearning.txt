@@ -21,8 +21,8 @@ git commit -m "wrote a readme file"
 
 git status
 
-git add       -->update
-git restore   -->discard                            -->丢弃工作区修改，回到最近一次 git commit 或者 git add 时的状态
+git add                         -->update
+git restore readme.txt         -->discard                            -->丢弃工作区修改，回到最近一次 git commit 或者 git add 时的状态
 
 git diff readme.txt
 
@@ -49,16 +49,16 @@ git reflog                                          -->查看命令历史，终�
 git diff HEAD -- GitLearning
 
 
+git restore --staged <file>..." to unstage          -->从暂存区撤销
+git reset HEAD <file>                               -->可以把暂存区的修改撤销掉（unstage），重新放回工作区
+git reset HEAD readme.txt
 
-
-
-
-
+git rm test.txt
 
 
 tips：
 git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到git checkout命令。
-
+git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
 
 
