@@ -22,7 +22,9 @@ git commit -m "wrote a readme file"
 git status
 
 git add                         -->update
-git restore readme.txt         -->discard                            -->丢弃工作区修改，回到最近一次 git commit 或者 git add 时的状态
+git restore readme.txt         -->discard           -->丢弃工作区修改，回到最近一次 git commit 或者 git add 时的状态，实际上就是从暂存区或者版本库进行恢复操作
+git restore --staged <file>..." to unstage          -->恢复暂存区，将某个文件的修改从暂存区撤销（git add）
+
 
 git diff readme.txt
 
@@ -34,7 +36,7 @@ commit 45c3a27fe10b37e10b89710df3b7fc47c87c6ccc     -->commit id,一般提交的
 Author: Nemo <345969718@qq.com>                     -->commit Author
 Date:   Tue May 24 02:03:11 2022 +0800              -->commit time
 
-git reset --hard HEAD^                              -->上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+git reset --hard HEAD^                              -->修改HEAD指针的位置，修改版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。抛弃某个或某几个commit
 git reset --hard xxxxxxx                            -->只要当前窗口没有关闭，可以回滚到对应的commit id
 
 
@@ -49,8 +51,8 @@ git reflog                                          -->查看命令历史，终�
 git diff HEAD -- GitLearning
 
 
-git restore --staged <file>..." to unstage          -->从暂存区撤销
-git reset HEAD <file>                               -->可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+git reset HEAD <file>                               -->修改某个文件，可以把暂存区的修改撤销掉（unstage），重新放回工作区，实际上就是恢复某个文件在暂存区的修改的同时，使用版本库对该文件进行恢复
 git reset HEAD readme.txt
 
 git rm test.txt
